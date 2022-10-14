@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:\github\dnn_small\dnn_hls\ip_test\sim\verilog\dnn_topDual.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_dnn_topDual_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2288001fs"></ZoomEndTime>
+      <Cursor1Time time="996000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="272"></NameColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">output_port(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/output_port_V_Rst_A" type="logic">
+               <obj_property name="ElementShortName">output_port_V_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_Rst_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/output_port_V_Clk_A" type="logic">
+               <obj_property name="ElementShortName">output_port_V_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_Clk_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/output_port_V_Dout_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/output_port_V_Din_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/output_port_V_WEN_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/output_port_V_EN_A" type="logic">
+               <obj_property name="ElementShortName">output_port_V_EN_A</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/output_port_V_Addr_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group11" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group12" type="group">
+            <obj_property name="label">kernel_port(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Rst_B" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_Rst_B</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Rst_B</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Clk_B" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_Clk_B</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Clk_B</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Dout_B" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_Dout_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Dout_B[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Din_B" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_Din_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Din_B[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_WEN_B" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_WEN_B[3:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_WEN_B[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_EN_B" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_EN_B</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_EN_B</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Addr_B" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_Addr_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Addr_B[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Rst_A" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Rst_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Clk_A" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Clk_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Dout_A" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Din_A" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_WEN_A" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_EN_A" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_EN_A</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/kernel_port_V_Addr_A" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group27" type="group">
+            <obj_property name="label">data_port(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Rst_B" type="logic">
+               <obj_property name="ElementShortName">data_port_V_Rst_B</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Rst_B</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Clk_B" type="logic">
+               <obj_property name="ElementShortName">data_port_V_Clk_B</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Clk_B</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Dout_B" type="array">
+               <obj_property name="ElementShortName">data_port_V_Dout_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Dout_B[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Din_B" type="array">
+               <obj_property name="ElementShortName">data_port_V_Din_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Din_B[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_WEN_B" type="array">
+               <obj_property name="ElementShortName">data_port_V_WEN_B[3:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_WEN_B[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_EN_B" type="logic">
+               <obj_property name="ElementShortName">data_port_V_EN_B</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_EN_B</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Addr_B" type="array">
+               <obj_property name="ElementShortName">data_port_V_Addr_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Addr_B[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Rst_A" type="logic">
+               <obj_property name="ElementShortName">data_port_V_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Rst_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Clk_A" type="logic">
+               <obj_property name="ElementShortName">data_port_V_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Clk_A</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Dout_A" type="array">
+               <obj_property name="ElementShortName">data_port_V_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Din_A" type="array">
+               <obj_property name="ElementShortName">data_port_V_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_WEN_A" type="array">
+               <obj_property name="ElementShortName">data_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_EN_A" type="logic">
+               <obj_property name="ElementShortName">data_port_V_EN_A</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/data_port_V_Addr_A" type="array">
+               <obj_property name="ElementShortName">data_port_V_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group42" type="group">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/ap_idle" type="logic">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group47" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/ap_rst" type="logic">
+            <obj_property name="ElementShortName">ap_rst</obj_property>
+            <obj_property name="ObjectShortName">ap_rst</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group49" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_dnn_topDual_top/AESL_inst_dnn_topDual/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group51" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group52" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group53" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/AUTOTB_TRANSACTION_NUM" type="array">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group54" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/LENGTH_data_port_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_data_port_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_data_port_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/LENGTH_kernel_port_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_kernel_port_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_kernel_port_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/LENGTH_output_port_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_output_port_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_output_port_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group61" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group62" type="group">
+            <obj_property name="label">output_port(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/output_port_V_DOUT_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/output_port_V_DIN_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/output_port_V_WEN_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/output_port_V_EN_A" type="logic">
+               <obj_property name="ElementShortName">output_port_V_EN_A</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/output_port_V_ADDR_A" type="array">
+               <obj_property name="ElementShortName">output_port_V_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">output_port_V_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group70" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group71" type="group">
+            <obj_property name="label">kernel_port(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/kernel_port_V_DOUT_B" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_DOUT_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_DOUT_B[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/kernel_port_V_EN_B" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_EN_B</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_EN_B</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/kernel_port_V_ADDR_B" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_ADDR_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_ADDR_B[31:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/kernel_port_V_DOUT_A" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/kernel_port_V_EN_A" type="logic">
+               <obj_property name="ElementShortName">kernel_port_V_EN_A</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/kernel_port_V_ADDR_A" type="array">
+               <obj_property name="ElementShortName">kernel_port_V_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">kernel_port_V_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group86" type="group">
+            <obj_property name="label">data_port(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_dnn_topDual_top/data_port_V_DOUT_B" type="array">
+               <obj_property name="ElementShortName">data_port_V_DOUT_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_DOUT_B[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/data_port_V_EN_B" type="logic">
+               <obj_property name="ElementShortName">data_port_V_EN_B</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_EN_B</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/data_port_V_ADDR_B" type="array">
+               <obj_property name="ElementShortName">data_port_V_ADDR_B[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_ADDR_B[31:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/data_port_V_DOUT_A" type="array">
+               <obj_property name="ElementShortName">data_port_V_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/data_port_V_EN_A" type="logic">
+               <obj_property name="ElementShortName">data_port_V_EN_A</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_dnn_topDual_top/data_port_V_ADDR_A" type="array">
+               <obj_property name="ElementShortName">data_port_V_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">data_port_V_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_hs_driver_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_hs_driver" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1227771200fs"></ZoomStartTime>
+      <ZoomEndTime time="1228036701fs"></ZoomEndTime>
+      <Cursor1Time time="1227974200fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="342"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject type="logic" fp_name="/tb_hs_driver/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_hs_driver/aclk">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_hs_driver/begin_sim">
+      <obj_property name="ElementShortName">begin_sim</obj_property>
+      <obj_property name="ObjectShortName">begin_sim</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_hs_driver/ap_start">
+      <obj_property name="ElementShortName">ap_start</obj_property>
+      <obj_property name="ObjectShortName">ap_start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_hs_driver/ap_ready">
+      <obj_property name="ElementShortName">ap_ready</obj_property>
+      <obj_property name="ObjectShortName">ap_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_hs_driver/ap_idle">
+      <obj_property name="ElementShortName">ap_idle</obj_property>
+      <obj_property name="ObjectShortName">ap_idle</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_hs_driver/ap_done">
+      <obj_property name="ElementShortName">ap_done</obj_property>
+      <obj_property name="ObjectShortName">ap_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_hs_driver/counter">
+      <obj_property name="ElementShortName">counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group34">
+      <obj_property name="label">data_port</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_data_port_PORTA_ADDR">
+         <obj_property name="ElementShortName">dnn_LeNet_0_data_port_PORTA_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_data_port_PORTA_ADDR[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_data_port_PORTA_CLK">
+         <obj_property name="ElementShortName">dnn_LeNet_0_data_port_PORTA_CLK</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_data_port_PORTA_CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_data_port_PORTA_DIN">
+         <obj_property name="ElementShortName">dnn_LeNet_0_data_port_PORTA_DIN[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_data_port_PORTA_DIN[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_data_port_PORTA_DOUT">
+         <obj_property name="ElementShortName">dnn_LeNet_0_data_port_PORTA_DOUT[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_data_port_PORTA_DOUT[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_data_port_PORTA_EN">
+         <obj_property name="ElementShortName">dnn_LeNet_0_data_port_PORTA_EN</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_data_port_PORTA_EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_data_port_PORTA_RST">
+         <obj_property name="ElementShortName">dnn_LeNet_0_data_port_PORTA_RST</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_data_port_PORTA_RST</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_data_port_PORTA_WE">
+         <obj_property name="ElementShortName">dnn_LeNet_0_data_port_PORTA_WE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_data_port_PORTA_WE[1:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group42">
+      <obj_property name="label">kernel_port</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_kernel_port_PORTA_ADDR">
+         <obj_property name="ElementShortName">dnn_LeNet_0_kernel_port_PORTA_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_kernel_port_PORTA_ADDR[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_kernel_port_PORTA_CLK">
+         <obj_property name="ElementShortName">dnn_LeNet_0_kernel_port_PORTA_CLK</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_kernel_port_PORTA_CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_kernel_port_PORTA_DIN">
+         <obj_property name="ElementShortName">dnn_LeNet_0_kernel_port_PORTA_DIN[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_kernel_port_PORTA_DIN[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_kernel_port_PORTA_DOUT">
+         <obj_property name="ElementShortName">dnn_LeNet_0_kernel_port_PORTA_DOUT[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_kernel_port_PORTA_DOUT[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_kernel_port_PORTA_EN">
+         <obj_property name="ElementShortName">dnn_LeNet_0_kernel_port_PORTA_EN</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_kernel_port_PORTA_EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_kernel_port_PORTA_RST">
+         <obj_property name="ElementShortName">dnn_LeNet_0_kernel_port_PORTA_RST</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_kernel_port_PORTA_RST</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_kernel_port_PORTA_WE">
+         <obj_property name="ElementShortName">dnn_LeNet_0_kernel_port_PORTA_WE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_kernel_port_PORTA_WE[1:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group50">
+      <obj_property name="label">output_port</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_CLK">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_CLK</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_CLK</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_EN">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_EN</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_EN</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_ADDR">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_ADDR[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_CLK">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_CLK</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_DIN">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_DIN[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_DIN[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_EN">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_EN</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_EN</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_WE">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_WE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_WE[1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0_output_port_PORTA_WE">
+         <obj_property name="ElementShortName">dnn_LeNet_0_output_port_PORTA_WE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">dnn_LeNet_0_output_port_PORTA_WE[1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group352">
+      <obj_property name="label">L0_out</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L0_out_V_0_U/address0">
+         <obj_property name="ElementShortName">address0[9:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[9:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L0_out_V_0_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L0_out_V_0_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L0_out_V_0_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L0_out_V_0_U/q0">
+         <obj_property name="ElementShortName">q0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L0_out_V_0_U/address1">
+         <obj_property name="ElementShortName">address1[9:0]</obj_property>
+         <obj_property name="ObjectShortName">address1[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L0_out_V_0_U/q1">
+         <obj_property name="ElementShortName">q1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q1[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group361">
+      <obj_property name="label">L1_out</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/address0">
+         <obj_property name="ElementShortName">address0[12:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[12:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/q0">
+         <obj_property name="ElementShortName">q0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/address1">
+         <obj_property name="ElementShortName">address1[12:0]</obj_property>
+         <obj_property name="ObjectShortName">address1[12:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/ce1">
+         <obj_property name="ElementShortName">ce1</obj_property>
+         <obj_property name="ObjectShortName">ce1</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L1_out_V_U/q1">
+         <obj_property name="ElementShortName">q1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q1[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group371">
+      <obj_property name="label">L2_out0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_0_U/address0">
+         <obj_property name="ElementShortName">address0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_0_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_0_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_0_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group376">
+      <obj_property name="label">L2_out1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_1_U/address0">
+         <obj_property name="ElementShortName">address0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_1_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_1_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_1_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group382">
+      <obj_property name="label">L2_out2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_2_U/address0">
+         <obj_property name="ElementShortName">address0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_2_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_2_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_2_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group482">
+      <obj_property name="label">L2_out3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_3_U/address0">
+         <obj_property name="ElementShortName">address0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_3_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_3_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_3_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group582">
+      <obj_property name="label">L2_out4</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_4_U/address0">
+         <obj_property name="ElementShortName">address0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_4_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_4_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_4_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group610">
+      <obj_property name="label">L2_out5</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_5_U/address0">
+         <obj_property name="ElementShortName">address0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_5_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_5_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L2_out_V_5_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group620">
+      <obj_property name="label">L2_out6</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group300">
+      <obj_property name="label">L3_out</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/address0">
+         <obj_property name="ElementShortName">address0[10:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[10:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/q0">
+         <obj_property name="ElementShortName">q0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/address1">
+         <obj_property name="ElementShortName">address1[10:0]</obj_property>
+         <obj_property name="ObjectShortName">address1[10:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/ce1">
+         <obj_property name="ElementShortName">ce1</obj_property>
+         <obj_property name="ObjectShortName">ce1</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L3_out_V_U/q1">
+         <obj_property name="ElementShortName">q1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q1[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group320">
+      <obj_property name="label">L4_out</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L4_out_V_U/address0">
+         <obj_property name="ElementShortName">address0[8:0]</obj_property>
+         <obj_property name="ObjectShortName">address0[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L4_out_V_U/ce0">
+         <obj_property name="ElementShortName">ce0</obj_property>
+         <obj_property name="ObjectShortName">ce0</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L4_out_V_U/we0">
+         <obj_property name="ElementShortName">we0</obj_property>
+         <obj_property name="ObjectShortName">we0</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L4_out_V_U/d0">
+         <obj_property name="ElementShortName">d0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L4_out_V_U/q0">
+         <obj_property name="ElementShortName">q0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q0[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L4_out_V_U/address1">
+         <obj_property name="ElementShortName">address1[8:0]</obj_property>
+         <obj_property name="ObjectShortName">address1[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/dnn_top_acc_i/dnn_LeNet_0/inst/L4_out_V_U/ce1">
+         <obj_property name="ElementShortName">ce1</obj_property>
+         <obj_property name="ObjectShortName">ce1</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group576">
+      <obj_property name="label">bram_out</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group124">
+      <obj_property name="label">hs_driver</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/O_read_port_addr">
+         <obj_property name="ElementShortName">O_read_port_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">O_read_port_addr[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/O_read_port_clk">
+         <obj_property name="ElementShortName">O_read_port_clk</obj_property>
+         <obj_property name="ObjectShortName">O_read_port_clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/O_read_port_din">
+         <obj_property name="ElementShortName">O_read_port_din[15:0]</obj_property>
+         <obj_property name="ObjectShortName">O_read_port_din[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/blk1/O_read_port_en">
+         <obj_property name="ElementShortName">O_read_port_en</obj_property>
+         <obj_property name="ObjectShortName">O_read_port_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/blk1/O_read_port_we">
+         <obj_property name="ElementShortName">O_read_port_we[1:0]</obj_property>
+         <obj_property name="ObjectShortName">O_read_port_we[1:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/o_ap_done">
+         <obj_property name="ElementShortName">o_ap_done</obj_property>
+         <obj_property name="ObjectShortName">o_ap_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/o_ap_idle">
+         <obj_property name="ElementShortName">o_ap_idle</obj_property>
+         <obj_property name="ObjectShortName">o_ap_idle</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/o_ap_ready">
+         <obj_property name="ElementShortName">o_ap_ready</obj_property>
+         <obj_property name="ObjectShortName">o_ap_ready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/i_ap_start">
+         <obj_property name="ElementShortName">i_ap_start</obj_property>
+         <obj_property name="ObjectShortName">i_ap_start</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/acc_out_data">
+         <obj_property name="ElementShortName">acc_out_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">acc_out_data[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/o_max_v">
+         <obj_property name="ElementShortName">o_max_v</obj_property>
+         <obj_property name="ObjectShortName">o_max_v</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/o_max_lbl">
+         <obj_property name="ElementShortName">o_max_lbl[4:0]</obj_property>
+         <obj_property name="ObjectShortName">o_max_lbl[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/find_max_array">
+         <obj_property name="ElementShortName">find_max_array[15:0]</obj_property>
+         <obj_property name="ObjectShortName">find_max_array[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/addr">
+         <obj_property name="ElementShortName">addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/max_indx">
+         <obj_property name="ElementShortName">max_indx[4:0]</obj_property>
+         <obj_property name="ObjectShortName">max_indx[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_hs_driver/hs_driver_inst/o_max_v">
+      <obj_property name="ElementShortName">o_max_v</obj_property>
+      <obj_property name="ObjectShortName">o_max_v</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_hs_driver/hs_driver_inst/o_max_lbl">
+      <obj_property name="ElementShortName">o_max_lbl[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_max_lbl[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

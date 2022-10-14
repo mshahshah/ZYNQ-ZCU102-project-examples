@@ -1,0 +1,649 @@
+# tree format
+design:
+  data_interface: none #[bram, axi, none]
+  module_controller: none #[hs, axi, none]
+  fc_shared_memory: True
+  dataflow: True
+
+  reshape_factor : 2
+  source_files:
+      - top.cpp
+      - top.h
+      - dnn_configs.h
+      - dnn_layers.h
+      - dnn_configs.h
+
+  tb_files:
+      - top_tb.cpp
+      - monitors.h
+      - monitors.cpp
+
+  dse_cfg:
+    -
+      'to_do': True
+      'layer': 0
+      'target': 'w_out'
+      'range': [12, 32]
+
+
+design_variable_types:
+  in_t:  8
+  ker_t: 8
+  res_t: 8
+  mid_t: 8
+  cfg_t: 8
+
+
+trainer:
+  - train_batch_size: 64
+  - test_batch_size: 1000
+  - n_epochs: 1
+  - log_interval: 10
+
+design_layers:
+-
+    type         : IN
+    w_out        : 224
+    lyr_out      : 3
+    padding      : 0
+    data_type    : 16    #a number or auto
+
+-
+    type         : CONV
+    w_ker        : 11
+    stride       : 4
+    lyr_out      : 96
+    padding      : 0
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : POOL
+    w_ker        : 2
+    stride       : 2
+    pooling      : max
+    data_type    : 16   #a number or auto
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : CONV
+    w_ker        : 5
+    stride       : 1
+    lyr_out      : 256
+    padding      : 0
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : POOL
+    w_ker        : 2
+    stride       : 2
+    pooling      : max
+    data_type    : 16    #a number or auto
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : CONV
+    w_ker        : 3
+    stride       : 1
+    lyr_out      : 256
+    padding      : 0
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : CONV
+    w_ker        : 3
+    stride       : 1
+    lyr_out      : 384
+    padding      : 0
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : CONV
+    w_ker        : 3
+    stride       : 1
+    lyr_out      : 256
+    padding      : 0
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : FC
+    lyr_out      : 4096
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : FC
+    lyr_out      : 4096
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+-
+    type         : FC
+    lyr_out      : 1000
+    data_type    : 16    #a number or auto
+    activation   : relu
+    batch_in     : 1
+    batch_out    : 1
+    
+pragmas:
+  interface:
+      read_kernel:
+        parse: True
+        array:
+        function:
+            - label:   ''
+              type:    skip
+              pragma:  inline
+              options: ''
+
+        loop:
+            - label:   Lcol
+              type:    fix
+              pragma:  unroll
+              options:
+                  - factor 2
+
+            - label:   Lcol
+              type:    fix
+              pragma:  pipeline
+              options:
+
+      read_kernel3D:
+        parse: True
+        array:
+
+        function:
+            - label:   ''
+              type:    skip
+              pragma:  inline
+              options: ''
+
+        loop:
+            - label:   Lker
+              type:    fix
+              pragma:  unroll
+              options:
+                  - factor 2
+
+            - label:   Lker
+              type:    fix
+              pragma:  pipeline
+              options:
+
+      read_input3D:
+        parse: True
+        array:
+        function:
+            - label:   ''
+              type:    skip
+              pragma:  inline
+              options: ''
+
+        loop:
+            - label:   Lcol
+              type:    fix
+              pragma:  unroll
+              options:
+                  - factor 2
+
+            - label:   Lcol
+              type:    fix
+              pragma:  pipeline
+              options:
+
+      write_result:
+        parse: True
+        array:
+        function:
+            - label:   ''
+              type:    skip
+              pragma:  inline
+              options:
+
+        loop:
+            - label:   Lrow
+              type:    fix
+              pragma:  unroll
+              options:
+                  - factor 2
+
+            - label:   Lrow
+              type:    fix
+              pragma:  pipeline
+              options:
+
+      write_result3D:
+          parse: True
+          array:
+          function:
+              - label:   ''
+                type:    skip
+                pragma:  inline
+                options:
+
+          loop:
+              - label:   Lcol
+                type:    fix
+                pragma:  unroll
+                options:
+                    - factor 2
+
+              - label:   Lcol
+                type:    fix
+                pragma:  pipeline
+                options:
+
+  dnn_layers:
+      conv_3DT1:
+        parse: True
+        array:
+
+        function:
+            - label:   ''
+              type:    fix
+              pragma:  inline
+              options:
+                - 'off'
+
+        loop:
+            - label:   Lrow
+              type:    skip
+              pragma:  pipeline
+              options:
+
+
+            - label:   Lcol
+              type:    var
+              pragma:  pipeline
+              options:
+
+            - label:   LlyrO
+              type:    var
+              pragma:  pipeline
+              options:
+
+
+            - label:   LlyrI    # should be fixed
+              type:    skip
+              pragma:  pipeline
+              options:
+
+            - label:   Lwi  # need more analyzes
+              type:    var
+              pragma:  pipeline
+              options:
+
+            - label:   Lwj  # need more analyzes
+              type:    var
+              pragma:  pipeline
+              options:
+
+            - label:   Lwi  # need more analyzes
+              type:    var
+              pragma:  unroll
+              options:
+
+            - label:   Lwj  # is better to have
+              type:    var
+              pragma:  unroll
+              options:
+
+      ds_3DT1:
+        parse: True
+        array:
+            - label:    value_max
+              type:     var
+              pragma:   partition
+              options:
+               - type complete  -dim 0
+
+        function:
+            - label:   ''
+              type:    var
+              pragma:  inline
+              options:
+                - 'off'
+        loop:
+            - label:   Lrow
+              type:    skip
+              pragma:  pipeline
+              options:
+
+            - label:   Lcol
+              type:    var
+              pragma:  pipeline
+              options:
+
+            - label:   Lwi
+              type:    skip
+              pragma:  pipeline
+              options:
+
+            - label:   Lwj
+              type:    skip
+              pragma:  pipeline
+              options:
+
+            - label:   Llyr
+              type:    var
+              pragma:  pipeline
+              options:
+
+            - label:   Llyr
+              type:    var
+              pragma:  unroll
+              options:
+
+      conv2fc:
+        parse: True
+        array:
+        function:
+            - label:   ''
+              type:    fix
+              pragma:  inline
+              options:
+                - 'off'
+        loop:
+            - label:   Lrow
+              type:    skip
+              pragma:  pipeline
+              options:
+
+            - label:   Lcol
+              type:    fix
+              pragma:  pipeline
+              options:
+
+            - label:   Lcol
+              type:    fix
+              pragma:  unroll
+              options:
+      fc_T1:
+        parse: True
+        array:
+            - label:    mult_res
+              type:     skip
+              pragma:   partition
+              options:
+               - type complete  -dim 1
+        function:
+        loop:
+            - label:   Lcol    # should be fixed
+              type:    fix
+              pragma:  pipeline
+              options:
+
+        resources:
+            - label:   Lcol    # need more analyzes and finding dependencies
+              type:    fix
+              pragma:  mul
+              options:
+                - limit 4  -type operation
+
+  top_module:
+      dnn_LeNet:
+        parse: True
+        array:
+            - label:    data_port
+              type:     fix
+              pragma:   reshape
+              options:
+               - type cyclic -factor 2 -dim 1
+
+            - label:    kernel_port
+              type:     fix
+              pragma:   reshape
+              options:
+               - type cyclic -factor 2 -dim 1
+
+            - label:    output_port
+              type:     skip
+              pragma:   reshape
+              options:
+               - type cyclic -factor 2 -dim 1
+# ----------------------------------------------------------------------
+            - label:    L1_ker
+              type:     var
+              pragma:   partition
+              options:
+               - type complete -dim 0
+
+            - label:    L3_ker
+              type:     fix
+              pragma:   partition
+              options:
+               - type complete -dim 0
+
+            - label:    L5_ker
+              type:     var
+              pragma:   reshape
+              options:
+               - type cyclic  -factor 4 -dim 0
+
+
+
+            - label:    L6_ker
+              type:     var
+              pragma:   reshape
+              options:
+               - type cyclic  -factor 4 -dim 0
+
+
+            - label:    L7_ker
+              type:     fix
+              pragma:   reshape
+              options:
+               - type cyclic  -factor 4 -dim 0
+# ----------------------------------------------------------------------
+            - label:    L0_out     # skip because LeNet dataset is grayscale
+              type:     skip
+              pragma:   partition
+              options:
+               - type cyclic  -factor 3 -dim 1
+
+
+            - label:    L1_out
+              type:     fix
+              pragma:   partition
+              options:
+               - type cyclic  -factor 6 -dim 1
+
+            - label:    L2_out
+              type:     fix
+              pragma:   partition
+              options:
+               - type cyclic  -factor 6 -dim 1
+
+            - label:    L3_out
+              type:     fix
+              pragma:   partition
+              options:
+                - type cyclic  -factor 6 -dim 1
+
+            - label:    L4_out
+              type:     fix
+              pragma:   partition
+              options:
+                - type cyclic  -factor 6 -dim 1
+
+            - label:    L5_out
+              type:     fix
+              pragma:   reshape
+              options:
+               - type cyclic  -factor 4 -dim 0
+
+            - label:    L6_out
+              type:     fix
+              pragma:   reshape
+              options:
+               - type cyclic  -factor 4 -dim 0
+
+            - label:    L7_out
+              type:     fix
+              pragma:   reshape
+              options:
+               - type cyclic  -factor 4 -dim 0
+# ----------------------------------------------------------------------
+        function:
+
+        loop:
+        resources:
+
+custom_pragma_list:
+# --------------------------- TOP MODULE PORTS --------------------------
+  - set_directive_array_reshape    -type cyclic -factor 2 -dim 1   "dnn_LeNet" data_port
+  - set_directive_array_reshape    -type cyclic -factor 2 -dim 1   "dnn_LeNet" kernel_port
+  - set_directive_array_reshape    -type cyclic -factor 2 -dim 1   "dnn_LeNet" output_port
+# --------------------------- READ/WRITE INTERFACE --------------------------
+  - set_directive_unroll           -factor 2   "interface::read_kernel/Lcol"
+  - set_directive_pipeline            "interface::read_kernel/Lcol"
+
+  - set_directive_unroll           -factor 2   "interface::read_kernel3D/Lker"
+  - set_directive_pipeline            "interface::read_kernel3D/Lker"
+
+  - set_directive_unroll           -factor 2   "interface::read_input3D/Lcol"
+  - set_directive_pipeline            "interface::read_input3D/Lcol"
+
+  - set_directive_unroll           -factor 2   "interface::write_result2D/Lcol"
+  - set_directive_pipeline            "interface::write_result2D/Lcol"
+
+# --------------------------- LINKING MEMORIES --------------------------
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L1_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L3_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L5_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L6_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L7_ker
+
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L1_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L2_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L3_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L4_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L5_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L6_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L7_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L7_out1D
+  - set_directive_array_reshape    -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L8_out
+  - set_directive_array_reshape    -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L9_out
+  - set_directive_array_reshape    -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L10_out
+# ---------------------------- Layers pragma ------------------------------
+  - set_directive_pipeline         "dnn_layers::conv_3DT1/Lcol"
+  - set_directive_unroll           "dnn_layers::conv_3DT1/LlyrI"
+  #- set_directive_allocation       -limit 150  -type operation   "dnn_layers::conv_3DT1/Lwj" mul
+  - set_directive_pipeline         "dnn_layers::ds_3DT1/Lcol"
+  - set_directive_unroll           "dnn_layers::ds_3DT1/Llyr"
+  - set_directive_pipeline         "dnn_layers::conv2fc/Lrow"
+  - set_directive_pipeline         "dnn_layers::fc_T1/Lcol"
+  - set_directive_allocation       -limit 8  -type operation   "dnn_layers::fc_T1/Lcol" mul
+  - set_directive_unroll           -factor 8   "dnn_layers::fc_T1/Lcol"
+
+best_pragma_list:
+# --------------------------- TOP MODULE PORTS --------------------------
+  - set_directive_array_reshape    -type cyclic -factor 2 -dim 1   "dnn_LeNet" data_port
+  - set_directive_array_reshape    -type cyclic -factor 2 -dim 1   "dnn_LeNet" kernel_port
+  - set_directive_array_reshape    -type cyclic -factor 2 -dim 1   "dnn_LeNet" output_port
+# --------------------------- READ/WRITE INTERFACE --------------------------
+  - set_directive_unroll           -factor 2   "interface::read_kernel/Lcol"
+  - set_directive_pipeline            "interface::read_kernel/Lcol"
+
+  - set_directive_unroll           -factor 2   "interface::read_kernel3D/Lker"
+  - set_directive_pipeline            "interface::read_kernel3D/Lker"
+
+  - set_directive_unroll           -factor 2   "interface::read_input3D/Lcol"
+  - set_directive_pipeline            "interface::read_input3D/Lcol"
+
+  - set_directive_unroll           -factor 2   "interface::write_result2D/Lcol"
+  - set_directive_pipeline            "interface::write_result2D/Lcol"
+
+# --------------------------- LINKING MEMORIES --------------------------
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L1_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L3_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L5_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L6_ker
+  - set_directive_array_reshape    -type cyclic  -factor 2 -dim 1   "dnn_LeNet" L7_ker
+
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L1_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L2_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L3_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L4_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L5_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L6_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L7_out
+  - set_directive_array_partition  -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L7_out1D
+  - set_directive_array_reshape    -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L8_out
+  - set_directive_array_reshape    -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L9_out
+  - set_directive_array_reshape    -type cyclic  -factor 2  -dim 1   "dnn_LeNet" L10_out
+# ---------------------------- Layers pragma ------------------------------
+  - set_directive_pipeline         "dnn_layers::conv_3DT1/Lcol"
+  - set_directive_unroll           "dnn_layers::conv_3DT1/LlyrI"
+  #- set_directive_allocation       -limit 150  -type operation   "dnn_layers::conv_3DT1/Lwj" mul
+  - set_directive_pipeline         "dnn_layers::ds_3DT1/Lcol"
+  - set_directive_unroll           "dnn_layers::ds_3DT1/Llyr"
+  - set_directive_pipeline         "dnn_layers::conv2fc/Lrow"
+  - set_directive_pipeline         "dnn_layers::fc_T1/Lcol"
+  - set_directive_allocation       -limit 8  -type operation   "dnn_layers::fc_T1/Lcol" mul
+  - set_directive_unroll           -factor 8   "dnn_layers::fc_T1/Lcol"
+
+minimal_pragma_list:
+  # --------------------------- READ/WRITE INTERFACE --------------------------
+  - set_directive_pipeline          "interface::read_input/Lcol"
+  - set_directive_pipeline          "interface::read_kernel/Lcol"
+  - set_directive_pipeline          "interface::read_kernel3D/Lker"
+  - set_directive_pipeline          "interface::read_input3D/Lcol"
+  - set_directive_pipeline          "interface::write_result/Lrow"
+  - set_directive_pipeline          "interface::write_result3D/Lrow"
+# ---------------------------- Layers pragma ------------------------------
+  - set_directive_pipeline         "dnn_layers::conv_3DT1/LlyrO"
+  #- set_directive_allocation       -limit 150  -type operation   "dnn_layers::conv_3DT1/Lwj" mul
+  - set_directive_pipeline         "dnn_layers::ds_3DT1/Lwi"
+  - set_directive_pipeline         "dnn_layers::conv2fc/Lcol"
+  - set_directive_pipeline         "dnn_layers::fc_T1/Lcol"
+
+base_pragma_list:
+  # --------------------------- READ/WRITE INTERFACE --------------------------
+  - set_directive_pipeline          "interface::read_input/Lcol"
+  - set_directive_pipeline          "interface::read_kernel/Lcol"
+  - set_directive_pipeline          "interface::read_kernel3D/Lker"
+  - set_directive_pipeline          "interface::read_input3D/Lcol"
+  - set_directive_pipeline          "interface::write_result/Lrow"
+  - set_directive_pipeline          "interface::write_result3D/Lrow"
+# ---------------------------- Layers pragma ------------------------------
+  - set_directive_pipeline         "dnn_layers::conv_3DT1/Lwj"
+  - set_directive_pipeline         "dnn_layers::ds_3DT1/Llyr"
+  - set_directive_pipeline         "dnn_layers::conv2fc/Lcol"
+  - set_directive_pipeline         "dnn_layers::fc_T1/Lcol"
+none:
+
+
+interface:
+  bram:
+    - set_directive_interface        -mode bram   "dnn_LeNet" data_port
+    - set_directive_interface        -mode bram   "dnn_LeNet" kernel_port
+    - set_directive_interface        -mode bram   "dnn_LeNet" output_port
+
+  axi:
+    - set_directive_interface -mode axis -register -register_mode both "dnn_LeNet" data_port
+    - set_directive_interface -mode axis -register -register_mode both "dnn_LeNet" kernel_port
+    - set_directive_interface -mode axis -register -register_mode both "dnn_LeNet" output_port
+
+  none:
+    - ''

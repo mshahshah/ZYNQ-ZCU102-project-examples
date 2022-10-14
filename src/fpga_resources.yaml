@@ -1,0 +1,52 @@
+# ////////////////////////////////////////////////////////////////////////////////////////
+# Copyright (c) by
+# Company:  IDEA LAB, The University of Texas at Dallas
+# Author :  Masoud Shahshahani
+#
+# Originally Create Date: Mar-5, 2020
+# Project Name    : DNN_Framework
+# Tool Versions   : Python +3
+#
+# Description     : To define FPGA types and available resources
+# Dependencies    :
+# Additional Comments:
+#
+# ///////////////////////////////////////////////////////////////////////////////////////
+VC707:
+    part: xc7vx485t-ffg1761-2
+    board_part: xilinx.com:vc707:part0:1.4
+    BRAM: 1030
+    DSP:  2800
+    FF:   607200
+    LUT:  303600
+    URAM: 0
+
+ZC706:
+    part:  xc7z045ffg900-2
+    board_part: xilinx.com:zc706:part0:1.0
+    Board: Zynq ZC706
+    BRAM:  1090
+    DSP:   900
+    FF:    437200
+    LUT:   218600
+    URAM:  0
+
+ZCU102:
+    part:  xczu9eg-ffvb1156-2-e
+    board_part: xilinx.com:zcu102:part0:3.3
+    Board: Zynq Ultra Scale ZCU102
+    BRAM:  1824
+    DSP:   2520
+    FF:    548160
+    LUT:   274080
+    URAM:  0
+
+KINTEX7:
+    part:  xc7k160tfbg484-1
+    board_part: ''
+    Board: kintex7
+    BRAM:  650
+    DSP:   600
+    FF:    202800
+    LUT:   101400
+    URAM:  0

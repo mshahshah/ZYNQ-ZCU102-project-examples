@@ -1,0 +1,132 @@
+# ////////////////////////////////////////////////////////////////////////////////////////
+# Copyright (c) by
+# Company:  IDEA LAB, The University of Texas at Dallas
+# Author :  Masoud Shahshahani
+#
+# Originally Create Date: Mar-5, 2020
+# Project Name    : DNN_Framework
+# Tool Versions   : Python +3
+#
+# Description     : Input arguments for setting design parameters
+# Dependencies    :
+# Additional Comments:
+#
+# ///////////////////////////////////////////////////////////////////////////////////////
+
+design_setting:
+  #topmodule: "dnn_LeNet"  #HLS top module name
+  #design_model : 'C1'
+  #design_model : 'F3'
+  #design_model : 'C1P1F1'
+  #design_model : 'C2P2F1'
+  #design_model : 'AlexNet'
+  design_model : 'LeNet'
+  #design_model : 'ConvNet'
+  #design_model : 'fast_LeNet'
+  #design_model : 'dnn_custom'
+  solution_name: "sol1"
+  create_ip: True
+  run_vivado_synthesize: False
+  run_vivado_power_analyzer: False
+  rebuil_hls: True  # if False, it will take files from /src
+  vivado_version: 2020 # 2020 for 'vitis'  and newer
+  syn_label: any  # is a label used for analyzes when running single synthesize
+  quantitative_analysis: True
+  analysis_log: False
+  # choose one directive set type, details are in each design yaml file
+  #syn_directive_type : 'best'
+  #syn_directive_type : 'custom'
+  syn_directive_type : 'minimal'
+  #syn_directive_type : 'base'
+  #syn_directive_type : 'none'
+
+  syn_timeout: 10 # set timeout in Minutes
+
+  training_setting: # for training a CNN network
+    train_model: False
+    TrainingPercentage: 90
+
+  Modeling: # for modeling a CNN network
+    DNN_ML_model: none # train, minimize, retrain, none
+    run_estimation: False
+    method: keras_MLP   #all, torch_MLP, keras_MLP, skl_MLP, skl_RFR, skl_GBR
+    excel_report: False
+    saving_trained_model: True
+    show_log_interval: False
+    plot_results: ['jpg']#['jpg', 'svg']
+
+
+  DSE_setting:
+    solution_counts: 3 # for dse_pragma
+    max_parallel_syn: 1  # max parallel running (for DSE pragma)
+    dse_name: default    # to place a label for the DSE
+    directive_selection: random # order
+    create_data_for_estimation: True # compact DSE data for building a CNN model
+    copy_bc_files: True
+    remove_hls_run_directories: True
+
+    # for dse_clock and dse_pragma_clock (MHz)
+    clock_range:
+      min: 80
+      max: 300
+      samples: 2
+
+    # for dse_dtype
+    dtype_range:
+      in_t: [8,16,32]
+      ker_t: [8,12,16]
+      res_t: [16]
+      all_variables: [8,12,16,24,32]
+
+    # for dse_cfg and dse_pragma_cfg
+    config_count: 2  # number of configs the DSE will explore
+    cfg_ranges:  # ranges to specify range of CNN layers to be explored
+      wout_range: [34, 48, 5]  # [min, max, num_samples]
+      lyr_in_range: [2, 5, 2]
+      lyr_out_range: [4, 8, 2]
+      ker_range: [3,5]   # [kernels]
+      stride_range: [2,3]  #[strides]
+
+  Sim_setting:
+    run_csim: False
+    run_rtl_sim: False
+    print_log: False
+    printTOfile: False
+    layersTOprint: [conv, pool, fc]
+
+  constraints:
+    max_exec_delay: 20 ms
+    DSP: 40%
+    BRAM: 60%
+
+  HW_setting:
+    execute: syn # none, map, syn, impl, all
+    bd_type: ZYNQ # ZYNQ, none, AXI_BRAM
+    Power_report: True
+    extension_name: ZYNQ
+
+  dev_etime: 10
+
+FPGA:
+  chip: ZCU102 # VC707, ZC706, ZCU102, KINTEX7
+  clock_period : 10
+
+vivado_path:
+  linux:
+    2019:
+      HLS:    '/opt/Xilinx/Vivado/2019.2/bin/vivado_hls'
+      VIVADO: '/opt/Xilinx/Vivado/2019.2/bin/vivado'
+
+    2020:
+      HLS:    '/opt/Xilinx/Vitis_HLS/2020.2/bin/vitis_hls'
+      VIVADO: '/opt/Xilinx/Vivado/2020.2/bin/vivado'
+  win32:
+    2019:
+      HLS:    'C:\Xilinx\Vivado\2019.2\bin\vivado_hls'
+      VIVADO:
+
+    2020:
+      HLS:    'C:\Xilinx\Vitis\2020.1\bin\vitis_hls'
+      VIVADO:
+
+
